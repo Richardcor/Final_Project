@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortes Fitness</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+
+  <main>
+    <header>
+        <!-- logo for navbar -->
+        <div class="logo">
+            <a href="#"><img src="logo.jpeg" alt="#"></a>
+        </div>
+         
+       <!-- Burger menu icon -->
+       <div class="menu-icon" onclick="toggleMenu()"></div>
+
+       
+
+        <!-- Lists for Navbar -->
+       <nav>
+         <ul>
+            
+            <li><a href="">About us</a></li>
+            <li><a href="">Training Programs</a>
+                <ul class="submenu">
+                    <li><a href="#">Full body</a></li>
+                    <li><a href="#">Push Pull</a></li>
+                    <li><a href="#">Upper Lower</a></li>
+                </ul>
+            </li>
+            <li><a href="">Nutrition</a>
+                <ul class="submenu">
+                    <li><a href="#">Diet plans</a></li>
+                    <li><a href="#">Supplements</a></li>
+                    <li><a href="#">Macros Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="">General Wellness</a>
+                <ul class="submenu">
+                    <li><a href="#">Meditation</a></li>
+                    <li><a href="#">Protocols</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+
+       </nav>
+</header>
+
+      <!-- Intro -->
+
+  <section class="Gym-main-photo">  <!-- Main picturebackground-->
+    <img class="mainpic" src="main.jpg" alt="muscle man">
+    <div class="main-content">
+      <div class="main-title">Cortes Fitness</div>
+      <h2 class="main-intro-subtitle">Unlock your full potential with our comprehensive fitness and nutrition protocols. Start your journey today!</h2>
+    </div>
+  </section>
+
+
+<!-- Header for image image-container -->
+
+<div class="grid-container">
+
+  <!-- Left Grid - Text -->
+  <div class="grid-item left">
+    <h2 class="container-heading">If you're ready to transform future you, send us an email today</h2>
+  </div>
+
+  <!-- Middle Grid - Before Man Image -->
+  <div class="grid-item middle">
+    <div class="image-container">
+      <!-- Paragraph on top of the image -->
+      <p>Click to transform</p>
+      <!-- Initial image -->
+      <img id="manImage" src="man_before.jpeg" alt="Man Before" onclick="transformImage()">
+      <!-- Transformed image (hidden initially) -->
+      <img id="transformedImage" src="man_after.jpg" alt="Man After">
+    </div>
+  </div>
+
+  <!-- Right Grid - Email Form -->
+  <div class="grid-item right">
+    <form class="email-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</div>
+
+
+</main>
+
+<script src='index.js'></script>
+</body>

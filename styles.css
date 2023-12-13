@@ -1,0 +1,237 @@
+/* Navbar section*/
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    border-bottom: 1px solid darkred;
+    background-color: black;
+}
+
+header ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 30px;
+}
+
+header ul li:last-child{
+    margin-right: 0;
+}
+header ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 22px 0;
+    display: inline-block;
+    transition: all ease 0.3s;
+    font-size: 15px;
+}
+
+header ul li a:hover{
+    color: darkred;
+}
+
+header ul .submenu {
+    position: absolute;
+    width: 200px;
+    background-color: black;
+    box-shadow: 0 20px 45px #9999;
+    margin-top: -10px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.5s;
+}
+
+header ul li:hover .submenu{
+    z-index: 99;
+    opacity: 1;
+    margin-top: 0;
+}
+
+header ul .submenu li{
+    margin: 0;
+    width: 100%;
+}
+
+header ul .submenu li a{
+    padding: 15px 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* burger menu icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    background: url('burger-menu.png') no-repeat;
+    background-size: contain;
+    width: 30px; 
+    height: 30px; 
+    position: absolute;
+    top: 15px; 
+    right: 15px; 
+
+}
+
+/* Media query to activate burger menu small screen & Mobile*/
+@media only screen and (max-width: 850px) {
+    .menu-icon {
+        display: block;
+       
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        color: whitesmoke;
+        background-color: black; 
+        top: 60px; 
+        right: 0; 
+        padding: 10px; 
+        z-index: 2;
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Main section */
+
+.mainpic{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border-bottom: 3px solid darkred;
+}
+
+.main-content{
+    position: absolute;
+    top: 90px;
+    left: 16px;
+    margin: 80px;
+    font-size: 14px;
+    width: 30%;
+    background: linear-gradient(to left,
+                    #000,
+                    #fff,
+                    #ccc,
+                    #ddd,
+                    #ccc,
+                    #fff,
+                    #999);
+    -webkit-background-clip: text;
+            color: transparent;
+}
+
+.main-title {
+    font-size: 40px;
+    background: linear-gradient(to left,
+                    #000,
+                    #fff,
+                    #ccc,
+                    #ddd,
+                    #ccc,
+                    #fff,
+                    #999);
+    -webkit-background-clip: text;
+            color: transparent;
+    
+}
+
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  /* Styling for each grid item */
+  .grid-item {
+    padding: 20px;
+  }
+  
+  .left {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  .middle {
+    background-color: #f2f2f2;
+  }
+  
+  .right {
+    background-color: #f2f2f2;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    color: #fff; 
+  }
+  
+  
+  .image-container img {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    width: 100%;
+    border-radius: 8px; 
+  }
+  
+  /* Hiding transformed image */
+  #transformedImage {
+    display: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-right: 50px;
+  }
+  
+  /* Styling email form */
+  .email-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .email-form label {
+    margin-top: 10px;
+  }
+  
+  .email-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Media query to make the grid a column on small screens & Mobile*/
+@media only screen and (max-width: 850px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Display as a single column */
+    }
+}
